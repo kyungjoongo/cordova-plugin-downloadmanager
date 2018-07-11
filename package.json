@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vasani-arpit/cordova-plugin-downloadmanager.git"
+    "url": "git+https://github.com/kyungjoongo/cordova-plugin-downloadmanager.git"
   },
   "keywords": [
     "ecosystem:cordova"
