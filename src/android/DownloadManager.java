@@ -45,15 +45,23 @@ public class DownloadManager extends CordovaPlugin {
             request.setAllowedNetworkTypes(android.app.DownloadManager.Request.NETWORK_WIFI | android.app.DownloadManager.Request.NETWORK_MOBILE);
             //Set whether this download may proceed over a roaming connection.
             request.setAllowedOverRoaming(false);
+
+
             //Set the title of this download, to be displayed in notifications (if enabled).
-            request.setTitle(filename);
+            request.setTitle('test-0234094.mp3');
             //Set a description of this download, to be displayed in notifications (if enabled)
-            request.setDescription("DataSync File Download.");
+
+            request.setDescription("kskjdf_kyungjoon File Download.");
+
             //Set the local destination for the downloaded file to a path within the application's external files directory            
             request.setDestinationInExternalFilesDir(cordova.getActivity().getApplicationContext(), Environment.DIRECTORY_DOWNLOADS, filename);
+
             //Set visiblity after download is complete
             request.setNotificationVisibility(android.app.DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+
             long downloadReference = downloadManager.enqueue(request);
+
+
             callbackContext.success(message);
         } else {
             callbackContext.error("Expected one non-empty string argument.");
